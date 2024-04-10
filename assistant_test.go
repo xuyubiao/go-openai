@@ -90,7 +90,7 @@ When asked a question, write and run Python code to answer the question.`
 					Object:       "assistant",
 					CreatedAt:    1234567890,
 					Name:         &assistantName,
-					Model:        openai.GPT4TurboPreview,
+					Model:        openai.GPT4Turbo,
 					Description:  &assistantDescription,
 					Instructions: &assistantInstructions,
 				})
@@ -150,7 +150,7 @@ When asked a question, write and run Python code to answer the question.`
 							Object:       "assistant",
 							CreatedAt:    1234567890,
 							Name:         &assistantName,
-							Model:        openai.GPT4TurboPreview,
+							Model:        openai.GPT4Turbo,
 							Description:  &assistantDescription,
 							Instructions: &assistantInstructions,
 						},
@@ -167,7 +167,7 @@ When asked a question, write and run Python code to answer the question.`
 		_, err := client.CreateAssistant(ctx, openai.AssistantRequest{
 			Name:         &assistantName,
 			Description:  &assistantDescription,
-			Model:        openai.GPT4TurboPreview,
+			Model:        openai.GPT4Turbo,
 			Instructions: &assistantInstructions,
 		})
 		checks.NoError(t, err, "CreateAssistant error")
@@ -214,7 +214,7 @@ When asked a question, write and run Python code to answer the question.`
 		assistant, err := client.ModifyAssistant(ctx, assistantID, openai.AssistantRequest{
 			Name:         &assistantName,
 			Description:  &assistantDescription,
-			Model:        openai.GPT4TurboPreview,
+			Model:        openai.GPT4Turbo,
 			Instructions: &assistantInstructions,
 		})
 		checks.NoError(t, err, "ModifyAssistant error")
@@ -228,7 +228,7 @@ When asked a question, write and run Python code to answer the question.`
 		assistant, err := client.ModifyAssistant(ctx, assistantID, openai.AssistantRequest{
 			Name:         &assistantName,
 			Description:  &assistantDescription,
-			Model:        openai.GPT4TurboPreview,
+			Model:        openai.GPT4Turbo,
 			Instructions: &assistantInstructions,
 			Tools:        []openai.AssistantTool{{Type: openai.AssistantToolTypeFunction}},
 		})
@@ -243,7 +243,7 @@ When asked a question, write and run Python code to answer the question.`
 		assistant, err := client.ModifyAssistant(ctx, assistantID, openai.AssistantRequest{
 			Name:         &assistantName,
 			Description:  &assistantDescription,
-			Model:        openai.GPT4TurboPreview,
+			Model:        openai.GPT4Turbo,
 			Instructions: &assistantInstructions,
 			Tools:        make([]openai.AssistantTool, 0),
 		})
@@ -333,7 +333,7 @@ When asked a question, write and run Python code to answer the question.`
 					Object:       "assistant",
 					CreatedAt:    1234567890,
 					Name:         &assistantName,
-					Model:        openai.GPT4TurboPreview,
+					Model:        openai.GPT4Turbo,
 					Description:  &assistantDescription,
 					Instructions: &assistantInstructions,
 				})
@@ -393,7 +393,7 @@ When asked a question, write and run Python code to answer the question.`
 							Object:       "assistant",
 							CreatedAt:    1234567890,
 							Name:         &assistantName,
-							Model:        openai.GPT4TurboPreview,
+							Model:        openai.GPT4Turbo,
 							Description:  &assistantDescription,
 							Instructions: &assistantInstructions,
 						},
@@ -409,7 +409,7 @@ When asked a question, write and run Python code to answer the question.`
 	_, err := client.CreateAssistant(ctx, openai.AssistantRequest{
 		Name:         &assistantName,
 		Description:  &assistantDescription,
-		Model:        openai.GPT4TurboPreview,
+		Model:        openai.GPT4Turbo,
 		Instructions: &assistantInstructions,
 	})
 	checks.NoError(t, err, "CreateAssistant error")
@@ -420,7 +420,7 @@ When asked a question, write and run Python code to answer the question.`
 	_, err = client.ModifyAssistant(ctx, assistantID, openai.AssistantRequest{
 		Name:         &assistantName,
 		Description:  &assistantDescription,
-		Model:        openai.GPT4TurboPreview,
+		Model:        openai.GPT4Turbo,
 		Instructions: &assistantInstructions,
 	})
 	checks.NoError(t, err, "ModifyAssistant error")
