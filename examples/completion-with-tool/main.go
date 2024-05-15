@@ -46,7 +46,7 @@ func main() {
 		dialogue[0].Content, f.Name)
 	resp, err := client.CreateChatCompletion(ctx,
 		openai.ChatCompletionRequest{
-			Model:    openai.GPT4Turbo,
+			Model:    openai.GPT4o,
 			Messages: dialogue,
 			Tools:    []openai.Tool{t},
 		},
@@ -76,7 +76,7 @@ func main() {
 		f.Name)
 	resp, err = client.CreateChatCompletion(ctx,
 		openai.ChatCompletionRequest{
-			Model:    openai.GPT4Turbo,
+			Model:    openai.GPT4o,
 			Messages: dialogue,
 			Tools:    []openai.Tool{t},
 		},
